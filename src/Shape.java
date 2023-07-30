@@ -1,11 +1,13 @@
 public class Shape {
     protected double square, volume;
 
-    protected void calculateV() {};
+    protected double calculateV() {
+        return 0;
+    };
 
-    protected void calculateS() {};
-
-
+    protected double calculateS() {
+        return 0;
+    };
 
 
 

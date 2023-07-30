@@ -1,24 +1,25 @@
 import java.util.Scanner;
 
 public class Cube extends Shape {
-    private double edge;
+    double edge;
 
-    private void inputData (double edge) {
+    public double inputData() {
         System.out.println("Enter the edge");
         Scanner in = new Scanner(System.in);
         this.edge = in.nextInt();
-        System.out.println("The edge is " + this.edge);
+        System.out.println("The edge " + this.edge + " is set");
+        return(this.edge);
     };
+
 
     @Override
-    public void calculateV (){
-        this.volume = Math.pow(this.edge, 3);
-        System.out.println(this.volume);
+        protected double calculateV (){
+            return Math.pow(this.edge, 3);
     };
-    private void outputData() {
-
+    @Override
+        protected double calculateS(){
+            return Math.pow(edge,2)*6;
     };
-
 
 
 
