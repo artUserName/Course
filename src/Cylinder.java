@@ -11,18 +11,18 @@ public class Cylinder extends Shape {
         System.out.println("The radius " + this.height + " is set");
         System.out.println("Enter the height");
         this.height = in.nextInt();
-        System.out.println("The height " + + this.height + " is set" );
-        return (this.radius);
-    };
+        System.out.println("The height " + this.height + " is set" );
+        return this.radius;
+    }
 
 
     @Override
     protected double calculateV (){
         return Math.pow(radius, 2) * Math.PI * height;
-    };
+    }
     @Override
     protected double calculateS(){
         return 2 * Math.PI * radius * (height + radius);
-    };
+    }
 
 }
