@@ -12,8 +12,10 @@ public class Test {
         createCardDeck(cardDeck);
         System.out.println(cardDeck);
         findAndRemoveRandomCard(cardDeck);
-        System.out.println(cardDeck);
-
+        while (!cardDeck.isEmpty()){
+            System.out.println(cardDeck);
+            findAndRemoveRandomCard(cardDeck);
+        }
     }
 
     private static void createCardDeck(ArrayList<String> list){
@@ -28,7 +30,8 @@ public class Test {
     }
     private static void findAndRemoveRandomCard(ArrayList<String> list) {
         Random random = new Random();
-        int a = random.nextInt(32);
+        int b = list.size();
+        int a = random.nextInt(b);
         System.out.println(list.get(a));
         list.remove(a);
     }

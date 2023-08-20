@@ -25,7 +25,8 @@ public class Test2 {
     }
     private static void findAndRemoveRandomCard(LinkedList list) {
         Random random = new Random();
-        int a = random.nextInt(32);
+        int b = list.size();
+        int a = random.nextInt(b);
         System.out.println(list.get(a));
         list.remove(a);
     }
