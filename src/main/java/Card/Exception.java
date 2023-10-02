@@ -5,7 +5,7 @@ package Card;
 
 public class Exception {
     public static void main(String[] args){
-        LinkedList<String> cardDeck = new LinkedList<>();
+        ArrayList<String> cardDeck = new ArrayList<>(32);
         createCardDeck(cardDeck);
         System.out.println(cardDeck);
         findAndRemoveRandomCard(cardDeck);
@@ -14,7 +14,7 @@ public class Exception {
 
     }
 
-    private static void createCardDeck(LinkedList list){
+    private static void createCardDeck(ArrayList list){
         String card = null;
         Random random = new Random();
         int a;
@@ -29,7 +29,7 @@ public class Exception {
         }
 
     }
-    private static void findAndRemoveRandomCard(LinkedList list) {
+    private static void findAndRemoveRandomCard(ArrayList list) {
         Random random = new Random();
         int a = random.nextInt(32);
         System.out.println(list.get(a));

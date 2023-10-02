@@ -3,20 +3,32 @@
 // then press Enter. You can now see whitespace characters in your code.
 
 // import java.util.Random;
+import main.java.Shapes;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("Available figures:");
+  public static void main(String[] args) {
+      ChromeOptions options = new ChromeOptions();
+      /*WebDriver driver = new ChromeDriver(options);*/
+      WebDriver driver = new ChromeDriver(options);
+      driver.get("https://google.com");
+
+
+
+  /*        System.out.println("Available figures:");
         System.out.println();
-        String choise = new String();
+        String choice;
         for (Shapes shapes : Shapes.values()) System.out.println(shapes);
         Scanner in = new Scanner(System.in);
         System.out.println("\nEnter the figure");
         System.out.println();
-        choise = String.valueOf(in.nextLine());
+        choice = in.nextLine();
 
-        switch (choise) {
+        switch (choice) {
             case "Cube":
                 Cube cube = new Cube();
                 cube.inputData();
@@ -35,7 +47,7 @@ public class Main {
                 System.out.println("The volume of cylinder is " + cylinder.calculateV());
                 System.out.println("The square of cylinder is " + cylinder.calculateS());
                 break;
-            case "Parallelipiped":
+            case "Parallelepiped":
                 Parallelipiped parallelipiped = new Parallelipiped();
                 parallelipiped.inputData();
                 System.out.println("The volume of parallelipiped is " + parallelipiped.calculateV());
@@ -51,6 +63,6 @@ public class Main {
 
 
 
-
+*/
        }
 }

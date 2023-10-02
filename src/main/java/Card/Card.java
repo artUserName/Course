@@ -18,6 +18,7 @@ public class Card {
         suit=setSuit();
         value=setValue();
         System.out.println(suit+" "+value);
+        System.out.println(setSuit()+" "+setValue());
     }
 
     public Card() {
